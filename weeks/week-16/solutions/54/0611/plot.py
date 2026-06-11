@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 def load_results(path: str) -> dict:
     with open(path) as f:
         raw = json.load(f)
+    if not isinstance(raw, dict):
+        raise ValueError(f"expected dict, got {type(raw).__name__}")
     return {int(k): v for k, v in raw.items()}
 
 

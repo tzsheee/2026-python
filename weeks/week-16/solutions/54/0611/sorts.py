@@ -1,6 +1,3 @@
-import random
-
-
 def bubble_sort(data: list) -> list:
     result = list(data)
     n = len(result)
