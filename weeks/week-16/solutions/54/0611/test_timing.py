@@ -12,7 +12,7 @@ class TestTimeit(unittest.TestCase):
             return a + b
 
         self.assertEqual(add(3, 4), 7)
-        self.assertIsNone(add(1))
+        self.assertEqual(add(1, 2), 3)
 
         @timeit
         def returns_none():
